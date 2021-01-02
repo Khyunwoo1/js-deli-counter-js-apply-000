@@ -26,6 +26,38 @@ function takeANumber(currentLine, newName) {
 }
 
 
+// Create a "greeting", which assigns a number for each customer
+
+// # of total customers is unknown
+
+// will probably use a while loop to iterate through each element of the array
+
+// array will start out empty, still putting customers into the line, 
+
+
+// and can print out number based on counter + 1, per person
+
+
+var numPeople = 0;
+
+function takeANumber(katzDeliLine){
+
+  numPeople += 1;
+  
+  // so katzDeliLine is an empty array that's passed through 
+  
+  var currentCustomer = katzDeliLine.push(numPeople);
+  
+  var greeting = "You are number" + numPeople;
+  
+  return greeting
+  
+}
+
+
+
+
+
 
 /*      NOW SERVING FUNCTION    */
 
@@ -34,6 +66,7 @@ function takeANumber(currentLine, newName) {
 function nowServing(currentLine) {
   
   // Gets the name of the first person in line
+      // maybe it's possible to just get the name from the index of currentLine?
   var firstPerson = currentLine.shift();
   
   
@@ -69,7 +102,8 @@ function currentLine(lineofPeople) {
   
   
   // In case there is no one in line
-  
+    // this should've been numTotalPeople for consistency
+    // also, not sure why I used a strict equality operator here..
   if (lineofPeople.length === 0){
     return "The line is currently empty."
   }
